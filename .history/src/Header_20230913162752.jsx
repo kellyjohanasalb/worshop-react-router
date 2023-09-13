@@ -8,7 +8,7 @@ function Header() {
           <img className="w-28" src="./images/logo.svg" alt="Logo" />
         {/* Menú de navegación */}
       </div>
-      
+   
       <nav className="desktop-menu">
         <ul>
           <li><a href="#">About</a></li>
