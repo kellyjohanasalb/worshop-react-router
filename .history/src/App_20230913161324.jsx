@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-  <>
+    <>
     <Routes>
           <Route >
             <Route path='header' element={<Header />} />
@@ -15,7 +15,7 @@ function App() {
             <Route path='footer' element={<Footer />} />
           </Route>
     </Routes>
-  </>
+    </>
   )
 }
 

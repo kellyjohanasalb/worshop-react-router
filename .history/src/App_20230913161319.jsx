@@ -7,15 +7,15 @@ import './App.css'
 
 function App() {
   return (
-  <>
+    <>
     <Routes>
           <Route >
             <Route path='header' element={<Header />} />
             <Route path='main' element={<Main />} />
             <Route path='footer' element={<Footer />} />
           </Route>
-    </Routes>
-  </>
+          </Routes>
+    </>
   )
 }
 

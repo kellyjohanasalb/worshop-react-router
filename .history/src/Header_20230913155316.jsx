@@ -2,10 +2,9 @@ import React from 'react';
 
 function Header() {
   return (
-    <header className="header bg-dark-gray">
-      <div className="container mx-auto p-4">
-        <div className="flex justify-between items-center">
-          <img className="w-28" src="./images/logo.svg" alt="Logo" />
+    <header className="header">
+      <div className="logo-menu">
+        <img className="logo" src="./images/logo.svg" alt="Logo" />
         {/* Menú de navegación */}
       </div>
       {/* Botón de menú móvil y menú móvil */}

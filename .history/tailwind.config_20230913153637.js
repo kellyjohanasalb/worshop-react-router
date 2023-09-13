@@ -22,11 +22,9 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      'White':' hsl(0, 0%, 100%)'
-      'Black': 'hsl(0, 0%, 0%)'
-      'Dark Gray':' hsl(0, 0%, 55%)'
-      'Very Dark Gray': 'hsl(0, 0%, 41%)'
+     
     },
+    
     fontFamily: {
       sans: ['Alata', 'sans-serif'],
       serif: ['Josefin Sans', 'sans-serif'],

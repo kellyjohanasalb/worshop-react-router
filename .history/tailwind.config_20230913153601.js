@@ -22,11 +22,16 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     colors: {
-      'White':' hsl(0, 0%, 100%)'
-      'Black': 'hsl(0, 0%, 0%)'
-      'Dark Gray':' hsl(0, 0%, 55%)'
-      'Very Dark Gray': 'hsl(0, 0%, 41%)'
-    },
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    }
     fontFamily: {
       sans: ['Alata', 'sans-serif'],
       serif: ['Josefin Sans', 'sans-serif'],
