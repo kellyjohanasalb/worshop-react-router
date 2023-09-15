@@ -1,0 +1,236 @@
+@tailwind base;
+
+@layer base {
+    .wrapper {
+        @apply min-h-screen relative overflow-hidden
+    }
+
+    .landing-page {
+        @apply min-h-screen bg-no-repeat bg-cover bg-center relative flex flex-wrap justify-center items-center
+        lg:flex-nowrap lg:flex-col lg:justify-start lg:items-stretch
+    }
+
+    /*  NAVIGATION START  */
+    .header {
+        @apply flex justify-center items-center
+        sm:w-full sm:top-0 sm:left-0 sm:z-50
+    }
+
+    .navigation {
+        @apply basis-full flex flex-wrap justify-between items-center
+        sm:px-4 sm:pt-16 sm:relative
+        md:px-8
+        lg:px-16 lg:pt-8 lg:flex-row lg:justify-between lg:px-[10%]
+        xl:px-[10%]
+
+    }
+
+    .menu-container {
+        @apply flex 
+        sm:justify-between sm:z-50 sm:basis-full
+        lg:basis-auto
+    }
+
+    .brand-logo {
+        @apply grid place-content-center
+    }
+
+    .hamburger-menu {
+        @apply w-8 aspect-square bg-no-repeat transition-all
+        lg:hidden
+    }
+
+    .nav-links-container {
+        @apply flex justify-center items-center transition-all
+        sm:absolute sm:justify-start sm:px-4 sm:top-0 sm:left-0 sm:w-screen sm:h-screen sm:bg-primary-2 sm:z-[49]
+        md:px-8
+        lg:static lg:w-auto lg:h-auto lg:text-base lg:bg-transparent lg:p-0
+    }
+
+    .nav-items {
+        @apply flex justify-center items-center text-primary-1
+        sm:flex-col sm:items-start sm:gap-8 sm:uppercase
+        lg:flex-row lg:gap-4 lg:capitalize lg:gap-4
+        xl:gap-8
+
+    }
+
+    .nav-items a {
+        @apply relative
+        sm:font-['Josefin_Sans'] sm:text-3xl
+        lg:font-['Alata'] lg:text-base
+    }
+
+    /*  NAVIGATION END  */
+
+    /*  HERO START  */
+    .hero {
+        @apply basis-full   grow flex justify-start items-center text-primary-1
+        sm:h-screen sm:px-4
+        md:h-screen md:px-8
+        lg:px-[10%]
+    }
+
+    .hero-content {
+        @apply border border-primary-1 font-['Josefin_Sans'] 
+        sm:basis-full sm:p-4 sm:text-4xl
+        md:text-[3em] md:p-8 md:text-[2.8em] 
+        lg:max-w-[15ch]
+        xl:text-6xl
+    }
+
+    .hero-content p {
+        @apply leading-tight 
+        sm:max-w-[10ch]
+        lg:max-w-[15ch]
+
+    }
+
+    /*  HERO END  */
+
+    /*  ABOUT START  */
+    .about-section {
+        @apply grid gap-8
+        sm:px-4 sm:py-24
+        md:px-8
+        lg:px-[10%] lg:py-16 lg:grid-cols-8 lg:grid-rows-4 lg:gap-0
+        xl:grid-rows-3
+    }
+
+    .about-img {
+        @apply lg:row-start-1 lg:row-end-4 lg:col-start-1 lg:col-end-8    
+    }
+
+    .about-content {
+        @apply text-center bg-primary-1
+        sm:text-center
+        lg:row-start-2  lg:row-end-5 lg:col-start-3 lg:col-end-9 lg:p-16 lg:text-left
+        xl:row-start-2 xl:row-end-4 xl:col-start-5
+    }
+
+    .content-title {
+        @apply font-['Josefin_Sans'] leading-tight
+        sm:text-4xl
+        md:text-[2.5em]
+    }
+
+    .content-text {
+        @apply text-primary-3
+        sm:p-6 sm:pb-0
+        md:p-10
+        lg:p-0 lg:mt-8
+    }
+
+    /*  ABOUT END  */
+
+    /*  CREATIONS START  */
+    .creations-section {
+        @apply pb-24 flex justify-center items-center gap-4 mb-24
+        sm:flex-col sm:p-4
+        md:p-8
+        lg:px-[10%] lg:flex-row lg:flex-wrap lg:mb-16;
+    }
+
+    .creations-title {
+        @apply font-['Josefin_Sans'] text-[2.5em] py-8
+        sm:order-1 sm:text-4xl
+        md:text-[2.5em]
+        lg:grow
+    }
+
+    .see-all-button {
+        @apply border-2 border-primary-2 px-16 py-2 my-4 transition
+        sm:order-3
+        hover:bg-primary-2 hover:text-primary-1
+        lg:order-2
+    }
+
+    .creations-grid {
+        @apply grid
+        sm:order-2 sm:grid-cols-1 sm:gap-4
+        md:gap-8  md:grid-cols-2 md:grid-flow-row 
+        lg:order-3 lg:basis-full lg:gap-4 lg:grid-cols-4 lg:grid-flow-row   
+    }
+
+    .creation {
+        @apply relative max-w-fit
+    }
+
+    .creation-overlay {
+        @apply absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary-2 opacity-70 z-10 text-primary-1 transition
+        hover:bg-primary-1 hover:text-primary-2 hover:bg-none
+    }
+
+    .overlay-text {
+        @apply absolute bottom-4 left-4 text-2xl font-['Josefin_Sans'] max-w-[8ch] z-20 transition
+    }
+
+
+    /*  CREATIONS END  */
+
+    /*  FOOTER START  */
+    .footer, .footer-navigation, .footer-navlinks, .socials, .social-links {
+        @apply flex justify-center items-center
+    }
+
+    .footer {
+        @apply bg-primary-2 text-primary-1 text-center py-16 gap-12
+        sm:flex-col
+        lg:px-[10%] lg:py-8 lg:flex-row lg:justify-between
+    }
+
+    .footer-navigation {
+        @apply text-primary-1 gap-8 
+        sm:flex-col
+        lg:items-start
+    }
+
+    .footer-navigation .brand-logo {
+        @apply w-32
+    }
+
+    .footer-navlinks {
+        @apply gap-4
+        sm:flex-col
+        lg:flex-row
+    }
+
+    .footer-navlinks a {
+        @apply relative
+    }
+
+    .socials {
+        @apply gap-4
+        sm:flex-col
+        lg:items-end
+    }
+
+    .social-links {
+        @apply gap-4
+    }
+
+    .social-links a {
+        @apply relative
+    }
+
+    .fa-brands {
+        @apply w-[2rem]
+    }
+
+    .copyright {
+        @apply text-primary-3 text-sm
+    }
+
+    /*  FOOTER END  */
+
+    .hoverable {
+        @apply pb-2
+        after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-0 after:z-[41] after:w-0 after:border-t-2 after:rounded-full
+         hover:after:w-1/2 hover:after:transition-[width]
+    }
+
+    .nav-item .hoverable {
+        @apply  sm:after:left-0 sm:after:translate-x-[0] sm:hover:after:w-full
+        lg:after:left-1/2 lg:after:translate-x-[-50%] md:hover:after:w-1/2
+    }
+}
