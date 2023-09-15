@@ -4,7 +4,7 @@ import Navigation from './components/Navigation.jsx';
 import Hero from './components/Hero';
 import About from './components/About';
 import Creations from './components/Creations';
-import Footer from './components/Footer';
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
