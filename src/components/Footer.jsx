@@ -1,6 +1,7 @@
 import brandLogo from '../../images/logo.svg'
 
-const Footer = () => {
+const Footer = () => { 
+    const listText = ["About", "Careers", "Events", "Products", "Support"];
     return(
         <footer className="footer">
             <div className="footer-navigation">
@@ -9,11 +10,11 @@ const Footer = () => {
                 </a>
                 <div className="">
                     <ul className="footer-navlinks">
-                        <li><a className="hoverable" href="#">About</a></li>
-                        <li><a className="hoverable" href="#">Careers</a></li>
-                        <li><a className="hoverable" href="#">Events</a></li>
-                        <li><a className="hoverable" href="#">Products</a></li>
-                        <li><a className="hoverable" href="#">Support</a></li>
+                        {
+                        listText.map((item, index) => (
+                        <li key={index}><a className="hoverable" href="#">{item}</a></li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>

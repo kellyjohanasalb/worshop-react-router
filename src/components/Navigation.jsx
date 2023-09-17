@@ -5,6 +5,7 @@ import hamburgerIcon from '../../images/icon-hamburger.svg'
 import React, { useState } from 'react'
 
 const Navigation = () => {
+    const listText = ["About", "Careers", "Events", "Products", "Support"];
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -12,7 +13,7 @@ const Navigation = () => {
         <header className={`header ${!isOpen ? "absolute" : "fixed"} lg:static`}>
             <nav className={`navigation`}>
                 <div className="menu-container">
-                     <a 
+                        <a 
                         href="#" 
                         className="brand-logo">
                         <img 
@@ -35,11 +36,12 @@ const Navigation = () => {
                 </div>
                 <div id="navigation-links" className={`nav-links-container ${!isOpen ? "sm:translate-x-[-100%]" : "sm:translate-x-0"} lg:translate-x-0`}>
                     <ul className="nav-items">
-                        <li className="nav-item"><a className="hoverable" href="#">About</a></li>
-                        <li className="nav-item"><a className="hoverable" href="#">Careers</a></li>
-                        <li className="nav-item"><a className="hoverable" href="#">Events</a></li>
-                        <li className="nav-item"><a className="hoverable" href="#">Products</a></li>
-                        <li className="nav-item"><a className="hoverable" href="#">Support</a></li>
+                    {
+                        listText.map((item, index) => (
+                        <li className="nav-item" key={index}><a className="hoverable" href="#">{item}</a></li>
+                            ))
+                        }
+
                     </ul>   
                 </div>
             </nav>

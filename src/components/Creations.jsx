@@ -15,85 +15,68 @@ import curiosityMobile from '../../images/mobile/image-curiosity.jpg'
 import fishEyeDesktop from '../../images/desktop/image-fisheye.jpg'
 import fishEyeMobile from '../../images/mobile/image-fisheye.jpg'
 
-
 const Creations = () => {
+    const imgCreation = [ 
+    {
+        imgDesktop: deepEarthDesktop,
+        imgMobile: deepEarthMobile,
+        text: "DEEP EARTH" 
+    },
+    {
+        imgDesktop: nightArcadeDesktop,
+        imgMobile: nightArcadeMobile,
+        text: "NIGHT ARCADE" 
+    },
+    {
+        imgDesktop: soccerTeamDesktop,
+        imgMobile: soccerTeamMobile,
+        text: "SOCCER TEAM VR" 
+    },
+    {
+        imgDesktop: gridDesktop,
+        imgMobile: gridMobile,
+        text: "THE GRID" 
+    },
+    {
+        imgDesktop: fromAboveDesktop,
+        imgMobile: fromAboveMobile,
+        text: "FROM UP ABOVE VR" 
+    },
+    {
+        imgDesktop: pocketBorealisDesktop,
+        imgMobile: pocketBorealisMobile,
+        text: "POCKET BOREALIS" 
+    },
+    {
+        imgDesktop: curiosityDesktop,
+        imgMobile: curiosityMobile,
+        text: "THE CURIOSITY" 
+    },
+    {
+        imgDesktop: fishEyeDesktop,
+        imgMobile: fishEyeMobile,
+        text: "MAKE IT FISHEYE" 
+    },
+    ];
     return (
         <section className="creations-section">
             <h2 className="creations-title">OUR CREATIONS</h2>
             <button className="see-all-button">SEE ALL</button>
             <div className="creations-grid">
-                <div className="creation">
-                     <picture className="creation-img">
-                        <source srcSet={deepEarthDesktop} media="(min-width: 480px)"/>
-                        <img src={deepEarthMobile} alt="" />
+                        {
+                        imgCreation.map((item, index) => (
+
+                            <div className="creation" key={index}>
+                                <picture className="creation-img">
+                        <source srcSet={item.imgDesktop} media="(min-width: 480px)"/>
+                        <img src={item.imgMobile} alt="" />
                     </picture>
                     <div className="creation-overlay">
-                        <span className="overlay-text">DEEP EARTH</span>
+                        <span className="overlay-text">{item.text}</span>
                     </div> 
                 </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={nightArcadeDesktop} media="(min-width: 480px)"/>
-                        <img src={nightArcadeMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">NIGHT ARCADE</span>
-                    </div>   
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={soccerTeamDesktop} media="(min-width: 480px)"/>
-                        <img src={soccerTeamMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">SOCCER TEAM VR</span>
-                    </div>    
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={gridDesktop} media="(min-width: 480px)"/>
-                        <img src={gridMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">THE GRID</span>
-                    </div>    
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={fromAboveDesktop} media="(min-width: 480px)"/>
-                        <img src={fromAboveMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">FROM UP ABOVE VR</span>
-                    </div>    
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={pocketBorealisDesktop} media="(min-width: 480px)"/>
-                        <img src={pocketBorealisMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">POCKET BOREALIS</span>
-                    </div>
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={curiosityDesktop} media="(min-width: 480px)"/>
-                        <img src={curiosityMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">THE CURIOSITY</span>
-                    </div>
-                </div>
-                <div className="creation">
-                    <picture className="creation-img">
-                        <source srcSet={fishEyeDesktop} media="(min-width: 480px)"/>
-                        <img src={fishEyeMobile} alt="" />
-                    </picture>
-                    <div className="creation-overlay">
-                        <span className="overlay-text">MAKE IT FISHEYE</span>
-                    </div>
-                </div>                          
+                            ))
+                        }
             </div>
         </section>
     )
